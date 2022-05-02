@@ -1,5 +1,4 @@
-import 'package:dart_sudoku_solver/dart_sudoku_solver.dart'
-    as dart_sudoku_solver;
+import 'package:dart_sudoku_solver/dart_sudoku_solver.dart';
 
 final List<List<int>> board = [
   [7, 0, 2, 0, 5, 0, 6, 0, 0],
@@ -14,5 +13,11 @@ final List<List<int>> board = [
 ];
 
 void main(List<String> arguments) {
-  dart_sudoku_solver.SudoKuSolver().solve(board);
+  final SudoKuSolver solver = SudoKuSolver();
+
+  print("Initial board:\n");
+  solver.printBoard(board);
+
+  print("Solved board:\n");
+  solver.solve(board);
 }

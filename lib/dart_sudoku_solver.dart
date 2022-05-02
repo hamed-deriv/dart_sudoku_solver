@@ -59,10 +59,10 @@ class SudoKuSolver {
       !_isNumberInColumn(board: board, column: column, number: number) &&
       !_isNumberInBox(board: board, row: row, column: column, number: number);
 
-  void _printBoard(List<List<int>> board) {
+  void printBoard(List<List<int>> board) {
     for (int i = 0; i < _gridSize; i++) {
       print(
-        '${board[i][0]} ${board[i][1]} ${board[i][2]} \t ${board[i][3]} ${board[i][4]} ${board[i][5]} \t ${board[i][6]} ${board[i][7]} ${board[i][8]}',
+        '${board[i][0]} ${board[i][1]} ${board[i][2]}  ${board[i][3]} ${board[i][4]} ${board[i][5]}  ${board[i][6]} ${board[i][7]} ${board[i][8]}',
       );
 
       if ((i + 1) % 3 == 0) {
@@ -88,7 +88,7 @@ class SudoKuSolver {
       }
     }
 
-    _printBoard(board);
+    printBoard(board);
 
     return true;
   }
